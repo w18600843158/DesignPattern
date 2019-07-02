@@ -20,10 +20,14 @@ public class Emperor implements Iemperor{
     //取得单例
     //不用同步,多线程可能会创建多个实例
 //    public static Emperor getEmperor(){
-    //使用同步,结果只创建了一个实例
-    public static synchronized Emperor getEmperor(){
+    public static Emperor getEmperor(){
         if (emperor == null){
-            emperor = new Emperor(new Random().nextInt()+"");
+            //在静态代码块中使用同步语句
+            synchronized (Emperor.class){
+                if (emperor == null){
+                    emperor = new Emperor(new Random().nextInt()+"");
+                }
+            }
         }
         return emperor;
     }
