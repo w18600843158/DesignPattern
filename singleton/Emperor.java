@@ -18,7 +18,10 @@ public class Emperor implements Iemperor{
     }
 
     //取得单例
-    public static Emperor getEmperor(){
+    //不用同步,多线程可能会创建多个实例
+//    public static Emperor getEmperor(){
+    //使用同步,结果只创建了一个实例
+    public static synchronized Emperor getEmperor(){
         if (emperor == null){
             emperor = new Emperor(new Random().nextInt()+"");
         }
