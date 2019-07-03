@@ -4,7 +4,8 @@ import java.util.Random;
 
 //皇帝实现类
 public class Emperor implements Iemperor{
-    private static Emperor emperor;
+    //添加 vlolatile 声明,保证实例化是一个原子操作,防止 jvm 优化引起的指令重排,导致 emperor 未构造而富于地址
+    private static volatile Emperor emperor;
     //皇帝 Id
     private String id;
     //防止破坏单例
