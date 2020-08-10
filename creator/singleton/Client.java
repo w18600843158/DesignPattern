@@ -1,4 +1,4 @@
-package singleton;
+package creator.singleton;
 
 //场景
 public class Client implements Runnable{

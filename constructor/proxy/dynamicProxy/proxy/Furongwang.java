@@ -1,4 +1,4 @@
-package proxy.dynamicProxy;
+package constructor.proxy.dynamicProxy.proxy;
 
 public class Furongwang implements SellCigarette {
     @Override

@@ -1,4 +1,4 @@
-package singleton;
+package creator.singleton;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package singleton;
+package creator.singleton;
 
 //皇帝接口
 interface Iemperor{
